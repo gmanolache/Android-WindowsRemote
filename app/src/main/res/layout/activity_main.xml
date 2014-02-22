@@ -1,0 +1,71 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.gmanolache.windowsremote.MainActivity"
+    android:background="#2c3e50"
+    tools:ignore="MergeRootFrame">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/Volume"
+            android:id="@+id/Volume"
+            android:layout_gravity="center_horizontal" />
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/VolumeSeek"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:max="64"
+            android:progress="10" />
+
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toggleButton"
+            android:textOn="Mutted"
+            android:textOff="Mute"
+            android:background="#8e44ad"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/activity_vertical_margin" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#8e44ad"
+            android:enabled="true"
+            android:id="@+id/Shutdown"
+            android:text="@string/Shutdown"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:onClick="ShutdownHandler" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/textView"
+            android:layout_marginBottom="32dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/Connecting"
+        android:id="@+id/Status"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="true" />
+    </FrameLayout>

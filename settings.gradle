@@ -1,0 +1,1 @@
+include ':app', ':parallel-basic-http-client', ':signala', ':signala.longpolling'
